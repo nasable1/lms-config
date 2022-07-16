@@ -20,7 +20,9 @@ spring:
         - id: service-users-sign-in
           uri: lb://service-users
           predicates:
-            - Path=/users/signIn,/users/signIn
+            - Path=/users/signIn,/users/signUp
+  zipkin:
+    baseUrl: http://127.0.0.1:9411/
 
 eureka:
   client:

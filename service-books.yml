@@ -1,7 +1,7 @@
 server:
   port: 0
   servlet:
-    context-path: /prices
+    context-path: /books
 
 management:
   health:
@@ -15,16 +15,16 @@ spring:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/bookstore
     # the following values must be added in the vault as following:
-    # vault kv put secret/service-prices spring.datasource.username=service_prices
-    # vault kv put secret/service-prices spring.datasource.password=srv-prcs
-    username: service_prices
-    password: srv-prcs
+    # vault kv put secret/service-books spring.datasource.username=service_books
+    # vault kv put secret/service-books spring.datasource.password=srv-bks
+    username: service_books
+    password: srv-bks
     initialization-mode: always
-    jpa:
-      database-platform: org.hibernate.dialect.PostgreSQLDialect
-      show-sql: false
-      hibernate:
-        ddl-auto: create
+  jpa:
+     database-platform: org.hibernate.dialect.PostgreSQLDialect
+     show-sql: false
+     hibernate:
+       ddl-auto: validate
   jackson:
     deserialization:
       FAIL_ON_IGNORED_PROPERTIES: false

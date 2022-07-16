@@ -34,8 +34,12 @@ spring:
     stream:
       binder:
         brokers: localhost:9092
+  zipkin:
+    baseUrl: http://127.0.0.1:9411/
+
 
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka
+
