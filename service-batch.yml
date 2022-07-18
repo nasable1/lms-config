@@ -15,6 +15,7 @@ spring:
     platform: postgres
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/bookstore
+    jdbc-url: jdbc:postgresql://localhost:5432/bookstore
     username: service_users
     password: srv-usrs
     initialization-mode: always
@@ -33,8 +34,6 @@ spring:
   batch:
     initialize-schema: always
     schema: classpath:org/springframework/batch/core/schema-postgresql.sql
-  zipkin:
-    baseUrl: http://127.0.0.1:9411/
 
 eureka:
   client:

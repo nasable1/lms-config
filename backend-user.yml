@@ -17,12 +17,16 @@ spring:
             Path=/books/**
           filters:
             - AuthFilter
+	- id: service-amortization-id
+          uri: lb://service-amortization
+          predicates:
+            Path=/amortization/**
+          filters:
+            - AuthFilter
         - id: service-users-sign-in
           uri: lb://service-users
           predicates:
-            - Path=/users/signIn,/users/signUp
-  zipkin:
-    baseUrl: http://127.0.0.1:9411/
+            - Path=/users/signIn,/users/signIn
 
 eureka:
   client:
