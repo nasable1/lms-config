@@ -1,7 +1,7 @@
 server:
   port: 0
   servlet:
-    context-path: /books
+    context-path: /amortization
 
 management:
   health:
@@ -14,8 +14,8 @@ spring:
     platform: postgres
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/bookstore
-    username: service_books
-    password: srv-bks
+    username: service_amortization
+    password: srv-amort
     initialization-mode: always
   jpa:
      database-platform: org.hibernate.dialect.PostgreSQLDialect
