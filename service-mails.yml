@@ -22,4 +22,4 @@ spring:
       binder:
         brokers: localhost:9092
 
-kafka.bootstrapAddress: localhost:9092
+#kafka.bootstrapAddress: localhost:9092
