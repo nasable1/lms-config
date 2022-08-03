@@ -19,6 +19,10 @@ spring:
     stream:
       bindings:
         listenMessages-in-0.destination: mails
+          consumer:
+            configuration:
+              value:
+                deserializer: org.apache.kafka.common.serialization.StringDeserializer
       binder:
         brokers: localhost:9092
 
