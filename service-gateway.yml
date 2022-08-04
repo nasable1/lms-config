@@ -17,10 +17,34 @@ spring:
             Path=/books/**
           filters:
             - AuthFilter
+        - id: service-investor-id
+          uri: lb://service-investor
+          predicates:
+            Path=/investor/**
+        - id: service-borrower-id
+          uri: lb://service-borrower
+          predicates:
+            Path=/borrower/**
+        - id: service-disbursement-id
+          uri: lb://service-disbursement
+          predicates:
+            Path=/disbursement/**
         - id: service-amortization-id
           uri: lb://service-amortization
           predicates:
             Path=/amortization/**
+        - id: service-repayment-id
+          uri: lb://service-repayment
+          predicates:
+            Path=/repayment/**
+        - id: service-distribution-id
+          uri: lb://service-distribution
+          predicates:
+            Path=/distribution/**
+        - id: service-foreclosure-id
+          uri: lb://service-foreclosure
+          predicates:
+            Path=/foreclosure/**
         - id: service-users-sign-in
           uri: lb://service-users
           predicates:
