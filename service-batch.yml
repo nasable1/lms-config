@@ -24,6 +24,30 @@ spring:
       show-sql: false
       hibernate:
         ddl-auto: create
+  mono:
+    datasource:
+      driverClassName: org.postgresql.Driver
+      password: 123_abc_!@#
+      url: jdbc:postgresql://localhost:5432/lendenlms
+      username: sa
+  partner:
+    datasource:
+      driverClassName: org.postgresql.Driver
+      password: srv-part
+      url: jdbc:postgresql://localhost:5432/lendenlms
+      username: service_partner
+  investor:
+    datasource:
+      driverClassName: org.postgresql.Driver
+      password: srv-invest
+      url: jdbc:postgresql://localhost:5432/lendenlms
+      username: service_investor
+  borrower:
+    datasource:
+      driverClassName: org.postgresql.Driver
+      password: srv-borrow
+      url: jdbc:postgresql://localhost:5432/lendenlms
+      username: service_borrower
   jackson:
     deserialization:
       FAIL_ON_IGNORED_PROPERTIES: false
