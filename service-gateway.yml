@@ -17,6 +17,10 @@ spring:
             Path=/books/**
           filters:
             - AuthFilter
+        - id: service-partner-id
+            uri: lb://service-partner
+            predicates:
+              Path=/partner/**
         - id: service-investor-id
           uri: lb://service-investor
           predicates:
