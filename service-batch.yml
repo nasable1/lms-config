@@ -59,6 +59,8 @@ spring:
   batch:
     initialize-schema: always
     schema: classpath:org/springframework/batch/core/schema-postgresql.sql
+    job:
+      enabled: false
 
 eureka:
   client:
