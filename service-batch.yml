@@ -27,9 +27,9 @@ spring:
   mono:
     datasource:
       driverClassName: org.postgresql.Driver
-      password: 123_abc_!@#
-      url: jdbc:postgresql://localhost:5432/lendenlms
-      username: sa
+      password: JNbrNhdxy_WThjkY
+      url: jdbc:postgresql://lenden-club.c60xechvrdpu.ap-south-1.rds.amazonaws.com:5432/lendenexo
+      username: read_exolendenite
   partner:
     datasource:
       driverClassName: org.postgresql.Driver
