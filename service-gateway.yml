@@ -49,6 +49,10 @@ spring:
           uri: lb://service-foreclosure
           predicates:
             Path=/foreclosure/**
+        - id: service-batch-id
+          uri: lb://service-batch
+          predicates:
+            Path=/batch/**
         - id: service-users-sign-in
           uri: lb://service-users
           predicates:
