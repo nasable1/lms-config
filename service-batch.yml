@@ -16,8 +16,8 @@ spring:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/lendenlms
     jdbc-url: jdbc:postgresql://localhost:5432/lendenlms
-    username: service_users
-    password: srv-usrs
+    username: service_batch
+    password: srv-bat
     initialization-mode: always
     jpa:
       database: default
@@ -31,6 +31,12 @@ spring:
 #       password: JNbrNhdxy_WThjkY
 #       url: jdbc:postgresql://lenden-club.c60xechvrdpu.ap-south-1.rds.amazonaws.com:5432/lendenexo
 #       username: read_exolendenite
+  users:
+    datasource:
+      driverClassName: org.postgresql.Driver
+      password: srv-usrs
+      url: jdbc:postgresql://localhost:5432/lendenlms
+      username: service_users
   partner:
     datasource:
       driverClassName: org.postgresql.Driver
