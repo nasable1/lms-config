@@ -19,12 +19,11 @@ spring:
     username: service_batch
     password: srv-bat
     initialization-mode: always
-    jpa:
-      database: default
-      database-platform: org.hibernate.dialect.PostgreSQLDialect
-      show-sql: false
-      hibernate:
-        ddl-auto: create
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: false
+    hibernate:
+      ddl-auto: create
 #   mono:
 #     datasource:
 #       driverClassName: org.postgresql.Driver
