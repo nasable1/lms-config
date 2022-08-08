@@ -33,12 +33,12 @@ spring:
         jdbc:
           lob:
             non_contextual_creation: true
-#   mono:
-#     datasource:
-#       driverClassName: org.postgresql.Driver
-#       password: JNbrNhdxy_WThjkY
-#       url: jdbc:postgresql://lenden-club.c60xechvrdpu.ap-south-1.rds.amazonaws.com:5432/lendenexo
-#       username: read_exolendenite
+  mono:
+    datasource:
+      driverClassName: org.postgresql.Driver
+      password: JNbrNhdxy_WThjkY
+      url: jdbc:postgresql://lenden-club.c60xechvrdpu.ap-south-1.rds.amazonaws.com:5432/lendenexo
+      username: read_exolendenite
   users:
     datasource:
       driverClassName: org.postgresql.Driver
