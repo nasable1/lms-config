@@ -17,9 +17,10 @@ eureka:
 spring:
  cloud:
    stream:
-     bindings:
-       listenMessages-in-0.destination: mails
-     binder:
-       brokers: localhost:9092
+     kafka:
+       bindings:
+         listenMessages-in-0.destination: mails
+       binder:
+         brokers: localhost:9092
 
 # kafka.bootstrapAddress: localhost:9092
