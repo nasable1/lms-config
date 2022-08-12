@@ -31,30 +31,5 @@ eureka:
 #                   serializer: org.apache.kafka.common.serialization.StringSerializer
 #         binder:
 #           brokers: localhost:9092
-
-spring.cloud.stream:
-  function:
-    definition: listenMessages
-  bindings:
-    listenMessages-in-0:
-      destination: mails
-    listenMessages-out-0:
-      destination: mails-success
-  kafka:
-    bindings:
-      listenMessages-in-0:
-        consumer:
-          configuration:
-            value:
-              deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
-      listenMessages-out-0:
-        producer:
-          configuration:
-            value:
-              serializer: org.springframework.kafka.support.serializer.JsonSerializer
-    binder:
-      brokers:
-        - localhost:9091
-        - localhost:9092
         
-# kafka.bootstrapAddress: localhost:9092
+kafka.bootstrapAddress: localhost:9092
