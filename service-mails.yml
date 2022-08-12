@@ -14,22 +14,39 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka
 
-spring:
-  cloud:
-    stream:
-      function:
-        definition: listenMessages
-      bindings:
-          listenMessages-in-0:
-            destination: mails
-      kafka:
-        bindings:
-          listenMessages-in-0:
-            consumer:
-              configuration:
-                value:
-                  serializer: org.apache.kafka.common.serialization.StringSerializer
-        binder:
-          brokers: localhost:9092
+# spring:
+#   cloud:
+#     stream:
+#       function:
+#         definition: listenMessages
+#       bindings:
+#           listenMessages-in-0:
+#             destination: mails
+#       kafka:
+#         bindings:
+#           listenMessages-in-0:
+#             consumer:
+#               configuration:
+#                 value:
+#                   serializer: org.apache.kafka.common.serialization.StringSerializer
+#         binder:
+#           brokers: localhost:9092
 
+spring.cloud.stream:
+  function:
+    definition: listenMessages
+  bindings:
+    listenMessages-in-0:
+      destination: mails
+  kafka:
+    bindings:
+      listenMessages-in-0:
+        consumer:
+          configuration:
+            value:
+              deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+    binder:
+      brokers:
+        - localhost:9092
+        
 # kafka.bootstrapAddress: localhost:9092
