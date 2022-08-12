@@ -38,6 +38,8 @@ spring.cloud.stream:
   bindings:
     listenMessages-in-0:
       destination: mails
+    listenMessages-out-0:
+      destination: mails-success
   kafka:
     bindings:
       listenMessages-in-0:
@@ -45,6 +47,11 @@ spring.cloud.stream:
           configuration:
             value:
               deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      listenMessages-out-0:
+        producer:
+          configuration:
+            value:
+              serializer: org.springframework.kafka.support.serializer.JsonSerializer
     binder:
       brokers:
         - localhost:9091
