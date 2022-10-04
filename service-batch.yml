@@ -18,8 +18,8 @@ spring:
   datasource:
     platform: postgres
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/lendenlms
-    jdbc-url: jdbc:postgresql://localhost:5432/lendenlms
+    url: jdbc:postgresql://localhost:5432/lms
+    jdbc-url: jdbc:postgresql://localhost:5432/lms
     username: service_batch
     password: srv-bat
     initialization-mode: always
@@ -33,35 +33,35 @@ spring:
         jdbc:
           lob:
             non_contextual_creation: true
-  mono:
-    datasource:
-      driverClassName: org.postgresql.Driver
-      password: JNbrNhdxy_WThjkY
-      url: jdbc:postgresql://lenden-club.c60xechvrdpu.ap-south-1.rds.amazonaws.com:5432/lendenexo
-      username: read_exolendenite
+  #mono:
+    #datasource:
+      #driverClassName: org.postgresql.Driver
+      #password: JNbrNhdxy_WThjkY
+      #url: jdbc:postgresql://lenden-club.c60xechvrdpu.ap-south-1.rds.amazonaws.com:5432/lendenexo
+      #username: read_exolendenite
   users:
     datasource:
       driverClassName: org.postgresql.Driver
       password: srv-usrs
-      url: jdbc:postgresql://localhost:5432/lendenlms
+      url: jdbc:postgresql://localhost:5432/lms
       username: service_users
   partner:
     datasource:
       driverClassName: org.postgresql.Driver
       password: srv-part
-      url: jdbc:postgresql://localhost:5432/lendenlms
+      url: jdbc:postgresql://localhost:5432/lms
       username: service_partner
   investor:
     datasource:
       driverClassName: org.postgresql.Driver
       password: srv-invest
-      url: jdbc:postgresql://localhost:5432/lendenlms
+      url: jdbc:postgresql://localhost:5432/lms
       username: service_investor
   borrower:
     datasource:
       driverClassName: org.postgresql.Driver
       password: srv-borrow
-      url: jdbc:postgresql://localhost:5432/lendenlms
+      url: jdbc:postgresql://localhost:5432/lms
       username: service_borrower
   jackson:
     deserialization:
